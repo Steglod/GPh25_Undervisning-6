@@ -1,7 +1,13 @@
 body {
-  margin: 0;
+  margin: 0; /* 0 er nøytral og trenger ikkje målenhet*/
 }
 
+.logo {
+  height: 32px;
+  width: 32px;
+  background-color: white;
+}
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -13,9 +19,9 @@ nav {
   display: flex;
   gap: 16px;
 }
-
+/* MAIN */
 section {
-  height: 100vh;
+  height: 100vh; /*' vh (viewheight) registrere hvor stor skjemen til enheten er (vw gjelder samme regel) */
 }
 
 img {
@@ -23,20 +29,29 @@ img {
   height: 300px;
   background-color: grey;
 }
-
+/* HERO */
 .hero {
+  width: 100%; /* ikkje nødvendig å ha med. Kun for visuell forståelse av koden */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px; /* Gap = mellomrom mellom to eller flere element */
 }
 
+.herotekst {
+  width: 50%;
+}
+
+.heroimg {
+  width: 50%;
+}
+/* ABOUT */
 .about {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+/* PROJECTS */
 .projects {
   display: flex;
   align-items: center;
@@ -51,10 +66,37 @@ img {
   justify-content: center;
   width: 300px;
   border: 1px solid black;
+  height: 400px;
+}
+/* FOOTER */
+footer {
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.logo {
-  height: 32px;
-  width: 32px;
-  background-color: white;
+/* MEDIA QUERY */
+@media (max-width: 426px) {
+/* Om skjermen er mindre enn 426px brukes CSS inne i @media istedenfor CSS utenfor */
+  body {
+    background-color: red;
+}
+
+.hero {
+  flex-direction: column;
+}
+
+.about {
+  flex-direction: column-reverse;
+}
+
+.projects {
+  flex-direction: column;
+  height: 100%;
+}
+
+
+
+.projectCard
+
 }
